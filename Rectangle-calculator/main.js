@@ -41,9 +41,11 @@ function isValid(x, y, w, h) {
 function calculatorArea() {
   const w = document.querySelector("#w");
   const h = document.querySelector("#h");
-
-  const element = document.querySelector("#area");
-  element.innerHTML = `Rectangle Area - ${h.value * w.value} `;
+  if (w.value > 300 || w.value < 1 || h.value > 300 || h.value < 1) {
+  } else {
+    const element = document.querySelector("#area");
+    element.innerHTML = `Rectangle Area - ${h.value * w.value} `;
+  }
 }
 
 function onWindowLoad() {
